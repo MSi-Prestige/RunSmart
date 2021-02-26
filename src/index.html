@@ -8,10 +8,12 @@
     <title>Pulse</title>
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+
     <div class="promo">
         <div class="container">
             <header class="header">
@@ -23,7 +25,7 @@
                     <span>Garmin, Polar, Suunto</span>
                 </div>
                 <div class="header__contacts">
-                    <a href="tel:+74999228974" class="header__phone">+7 (499) 922-89-74</a>
+                    <a href="tel:+74999228974" class="header__phone">+7 (499) 882-43-74</a>
                     <button class="button">заказать звонок</button>
                 </div>
             </header>
@@ -77,8 +79,54 @@
             </div>
         </div>
     </div>
+    <div class="consultation">
+        <div class="container">
+            <h2 class="title title_left">
+                Получите бесплатную консультацию по <br> подбору пульсометра
+            </h2>
+            <div class="consultation__descr">
+                Просто заполните форму заявки <br>
+                и мы перезвоним вам в течении 10 минут
+            </div>
+            <form class="feed-form" action="#">
+                <!-- Name !!!!!  -->
+                <input name="name" required type="text" placeholder="Ваше имя">
+                <input name="phone" type="number" placeholder="Ваш телефон">
+                <input name="email" required type="email" placeholder="Ваше E-mail">
+                <!-- <input type="submit" value="Заказать консультацию"> -->
+                <!-- NEW variant button submit -->
+                <button class="button button_submit">Заказать консультацию</button>
+                <!-- <button type="reset">Сброс</button> -->
 
-
+            </form>
+        </div>
+    </div>
+    <section class="carousel">
+        <div class="container">
+            <div class="carousel__inner">
+                <div><img src="img/chasin1.jpg" alt="1slide"></div>
+                <div><img src="img/karusel.jpg" alt="2slide"></div>
+                <div><img src="img/slajd2.jpg" alt="3slide"></div>
+            </div>
+        </div>
+    </section>
+    <section class="catalog">
+        <div class="container">
+            <h2 class="title">Каталог пульсометров</h2>
+            <ul class="catalog__tabs">
+                <li class="catalog__tab"></li>
+                <li class="catalog__tab"></li>
+                <li class="catalog__tab"></li>
+            </ul>
+            <div class="catalog__content"></div>
+            <div class="catalog__content"></div>
+            <div class="catalog__content"></div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

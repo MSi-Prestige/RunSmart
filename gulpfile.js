@@ -1,3 +1,4 @@
+// "use sctrict";
 const gulp = require('gulp');
 const browserSync = require('browser-sync');
 const sass = require('gulp-sass');
@@ -28,6 +29,6 @@ gulp.task('styles', function () {
 
 gulp.task('watch', function () {
     gulp.watch("src/sass/**/*.+(scss|sass)", gulp.parallel('styles'));
-})
+});
 
 gulp.task('default', gulp.parallel('watch', 'server', 'styles'));

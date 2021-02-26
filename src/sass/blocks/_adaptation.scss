@@ -28,7 +28,7 @@
     width: 100%;
   }
   .skills__intro {
-    font-size: 22px;
+    font-size: 21px;
   }
   .skills__container {
     display: block;
@@ -38,5 +38,17 @@
     margin-right: auto;
     margin-top: 15px;
     width: 60%;
+  }
+  .title_left {
+    font-weight: 200;
+    font-size: 20px;
+    text-align: center;
+  }
+  .consultation__descr {
+    font-size: 16px;
+    text-align: center;
+  }
+  .feed-form {
+    width: 100%;
   }
 }
