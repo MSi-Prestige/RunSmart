@@ -2,9 +2,14 @@
 
 $(document).ready(function () {
     $('.carousel__inner').slick({
-        // dots: true,
+
         speed: 1000,
+        adaptiveHeight: true,
+
+        // autoplay: true,
+        // autoplaySpeed: 5000,
         // adaptiveHeight: true,
+        variableWidth: true,
         // fade: true,
         // cssEase: "linear",
         prevArrow: '<button type="button" class="slick-prev"><img src="icons/leftArr.svg"></button>',
@@ -13,8 +18,9 @@ $(document).ready(function () {
             {
                 breakpoint: 992,
                 settings: {
-                    dots: true,
-                    arrows: false
+
+                    arrows: false,
+
                 }
             }
         ],

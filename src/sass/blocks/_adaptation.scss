@@ -51,4 +51,25 @@
   .feed-form {
     width: 100%;
   }
+
+  .slick-slide {
+    img {
+      width: 55%;
+    }
+  }
+  .catalog__tabs {
+    display: flex;
+    flex-direction: column;
+  }
+  .catalog__tab {
+    margin-top: 20px;
+  }
+  .carousel__inner {
+    width: 400px;
+  }
+}
+@media (max-width: 400px) {
+  .slick-slider {
+    width: 380px;
+  }
 }
