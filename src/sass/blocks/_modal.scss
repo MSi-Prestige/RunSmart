@@ -3,6 +3,7 @@
   position: fixed;
   width: 100%;
   height: 100%;
+  display: none; //! >>>>>>>>>>>>>>>>>>> что-бы сначало тыло скрыто
   background: rgba(0, 0, 0, 0.4);
   mix-blend-mode: normal;
   top: 0;
@@ -10,5 +11,40 @@
 .modal {
   //TODO: position- absolute ==>>  chaild - встанет относительно родителя . overlay
   position: absolute;
-  top: 50%; //! >>>>  с верху родителя .
+  top: 50%; //! >>>>  с верху родителя . расположение с absolute
+  left: 50%;
+  transform: translate(-50%, -50%); //! тут центр modal window. по X Y
+  width: 382px;
+  min-height: 402px;
+  background: #f2f2f2;
+  padding: 38px 40px 40px 40px;
+  &__close {
+    position: absolute; //TODO : 1  шаг
+    top: 0; //TODO : 2
+    right: -30px; //TODO : 3
+    font-size: 40px;
+    line-height: 20px;
+    color: $main-color;
+    cursor: pointer;
+  }
+  &__subtitle {
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    color: #0d0d0d;
+  }
+  &__descr {
+    text-align: center;
+    font-size: 14px;
+    color: #0d0d0d;
+  }
+  &_mini {
+    min-height: 140px;
+  }
+}
+
+#consultation,
+#order,
+#thanks {
+  display: none;
 }

@@ -59,5 +59,30 @@ $(document).ready(function () {
     }
     toggleSlide(".catalog-item__back");
     toggleSlide(".catalog-item__link");
+
+    //MODAL WIN
+
+    $("[data-modal=consultation]").on("click", function () {
+        $(".overlay, #consultation").fadeIn('slow');
+    });
+    //CLOSE MODAL
+    $(".modal__close").on("click", function () {
+        //! тут все крестики модальных окон. close on click
+        //! Methods Qjery - in documentation site http://jquery.page2page.ru/index.php5/%D0%A4%D0%BE%D1%80%D0%BC%D1%8B
+        $(".overlay, #consultation, #thanks, #order").fadeOut("slow");
+    });
+
+    //TODO: следим за всеми кнопками с классом .modal_mini
+    // $(".button_mini").on("click", function () {
+    //     $(".overlay, #order").fadeIn("slow");
+    // });
+    //TODO: подсавка заказа --- product name имя часов.
+    $(".button_mini").each(function (i) {
+        $(this).on("click", function () {
+            //! С ПРАВА НА ЛЕВО  - и text в modal__descr
+            $("#order .modal__descr").text($(".catalog-item__subtitle").eq(i).text());
+            $(".overlay, #order").fadeIn("slow");
+        });
+    });
 });
 
