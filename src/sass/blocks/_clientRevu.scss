@@ -1,0 +1,45 @@
+.container-revue {
+  margin-top: 80px;
+  max-width: 915px;
+  margin: 0 auto;
+}
+
+.user-block {
+  padding-top: 71px;
+
+  &__foto {
+    margin-right: 60px;
+    float: left;
+    height: 205px;
+    img {
+      width: 169px;
+      height: 169px;
+    }
+  }
+  &__name {
+    margin-left: 60px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #0d0d0d;
+  }
+  &__text {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 16px;
+    color: #0d0d0d;
+  }
+}
+
+span {
+  margin-top: 10px;
+  color: #646464;
+  font-size: 14px;
+}
+
+.text-revue {
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #0d0d0d;
+}
