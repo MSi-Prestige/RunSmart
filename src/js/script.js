@@ -1,5 +1,5 @@
 "use sctrict";
-
+//TODO:  JQUERY  $()
 $(document).ready(function () {
     $('.carousel__inner').slick({
 
@@ -84,5 +84,78 @@ $(document).ready(function () {
             $(".overlay, #order").fadeIn("slow");
         });
     });
+
+    //! Validate FORMS JQERY -------------------------------------------
+
+    function valideForms(form) {
+        $(form).validate(
+            {
+                rules: {
+                    name: {
+                        required: true,
+                        minlength: 4
+                    },
+                    phone: "required",
+                    email: {
+                        required: true,
+                        email: true,
+                    }
+                },
+                messages: {
+                    name: {
+                        required: "Пожалуйста, введите свое имя",
+                        minlength: jQuery.validator.format("Введите {0} символа!")
+                    },
+                    phone: "Пожалуйста, введите свой номер телефона",
+                    email: {
+                        required: "Пожалуйста, введите свою почту",
+                        email: "Неправильно введен адрес почты"
+                    }
+                }
+            }
+        );
+
+    }
+    valideForms("#consultation-form");
+    valideForms("#order form");
+    valideForms("#consultation form");
+
+    $("input[name=phone]").mask("+(371) 99999999");
+
+    //PHP //! Передает в фаил PHP структурир форму. 1 делом 
+    $("form").submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function () {
+            $(this).find("input").val("");
+            $("#consultation, #order").fadeOut();
+            $(".overlay, #thanks").fadeIn("slow");
+            $("form").trigger("reset");
+        });
+        return false;
+    });
+
+
+    //TODO: Scrool UP
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1600) {
+            $(".pageup").fadeIn();
+        } else {
+            $(".pageup").fadeOut();
+        }
+    });
+
+    //slow scrool 
+    // и переключения табов
+    $("a[href=#up]").click(function () {
+        const _href = $(this).attr("href");
+        $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+        return false;
+    });
+    //! Врубаем wow плагин.
+    new WOW().init();
 });
 

@@ -1,0 +1,21 @@
+.pageup {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  img {
+    width: 100%;
+  }
+}
+
+//! https://animate.style/   and CDN link.
+//! animate__animated animate__fadeInUp
+// или сам меняеш настройки .user-block__name {
+//   display: inline-block;
+//   margin: 0 0.5rem;
+
+//   animation: bounce;
+//   animation-duration: 2s;
+// }
